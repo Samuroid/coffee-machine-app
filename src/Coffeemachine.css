@@ -1,0 +1,49 @@
+.coffeeMachine{
+    background-color: #c69c6d;
+    width: 90vw;
+    padding-bottom: 1em;
+}
+
+.machineHeader{
+}
+
+.machineBody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.machineItem{
+    border: 1px solid cadetblue;
+    margin: 0 .5em;
+    padding: 0 .3em .3em .3em;
+    width: 10em;
+    height: 12em;
+}
+
+.machineItem > hgroup h2{
+    font-size: 16pt;
+}
+
+.machineItem > hgroup h3{
+    font-size: 13pt;
+}
+
+.itemQty{
+    font-size:13pt;
+}
+
+.itemBody{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: center;
+    justify-content: center;
+}
+
+.itemBody img{
+    width: 100px;
+}

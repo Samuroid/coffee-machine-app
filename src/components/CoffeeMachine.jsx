@@ -1,5 +1,6 @@
-
+import '../Coffeemachine.css';
 import Drink from "./Drink";
+import cafeLatteImg from "../img/cafe-latte.png";
 
 function CoffeeMachine(){
     return(
@@ -10,10 +11,34 @@ function CoffeeMachine(){
             </hgroup>
 
             <section className="machineBody">
-                <Drink />
-                <Drink />
-                <Drink />
-                <Drink />
+                <Drink 
+                key="1"
+                itemName="Café Latte" 
+                description="A drink you will love" 
+                imgSrc={cafeLatteImg}
+                imgAlt="Café latte" 
+                />
+                <Drink 
+                key="2"
+                itemName="Mocha" 
+                description="Get that chocolate feel" 
+                imgSrc="../img/mocha.png" 
+                imgAlt="Mocha"
+                />
+                <Drink 
+                key="3"
+                itemName="Café Té" 
+                description="Enjoy coffee & tea together" 
+                imgSrc="../img/cafe-te.png"
+                imgAlt="Café Té"
+                />
+                <Drink 
+                key="4"
+                itemName="Miami Vice" 
+                description="Feel the Miami vibe" 
+                imgSrc="../img/miami-vice-coffee.png" 
+                imgAlt="Miami Vice" 
+                />
             </section>
         </div>
     )
