@@ -68,12 +68,16 @@ export default class Drink extends Component{
     }
 
     addDrink = () =>{
-        this.setState({
-            dateAdded: new Date().toLocaleTimeString(), // this info is not persisting the first time round.
-            drinkName: this.props.itemName
+        this.setState(state => ({
+            id: state.id,
+            drinkName: this.props.itemName,
+            dateAdded: new Date().toLocaleTimeString(),
+            quantity: state.quantity
+        }), // on successful state update send to coffee machine to add drink to the machines order
+        () => {
+            this.props.addDrinkToOrder( this.getDrink() );
+            console.log("drink successfully added to the machine's order");
         });
-        console.log( this.getDrink() );
-        this.props.addDrinkToOrder( this.getDrink() );
     }
 
     render() {
